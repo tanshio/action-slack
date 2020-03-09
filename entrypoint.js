@@ -26,6 +26,9 @@ console.log("mesage", message.get().text);
           type: 'mrkdwn',
           text: message.get().text,
         },
+      },
+      {
+        "type": "divider"
       }
     ]
   })
