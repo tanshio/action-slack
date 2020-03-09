@@ -18,7 +18,7 @@ console.log("Sending message ...");
 console.log("mesage", message.get().text);
 (() => axios
   .post(process.env.SLACK_WEBHOOK, {
-    text: 'test',
+    text: message.get().text,
     blocks: [
       {
         type: 'section',
