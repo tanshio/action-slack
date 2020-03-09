@@ -15,14 +15,19 @@ REQUIRED_ENV_VARS.forEach(env => {
 });
 
 console.log("Sending message ...");
-console.log("mesage", message.get());
+console.log("mesage", message.get().text);
 (() => axios
   .post(process.env.SLACK_WEBHOOK, {
-    type: 'section',
-    text: {
-      type: 'mrkdwn',
-      text: message.get().text,
-    },
+    text: 'test',
+    blocks: [
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: '## test',
+        },
+      }
+    ]
   })
   .then(() => {
     console.log("Message sent ! Shutting down ...");
