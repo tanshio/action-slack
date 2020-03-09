@@ -15,6 +15,7 @@ REQUIRED_ENV_VARS.forEach(env => {
 });
 
 console.log("Sending message ...");
+console.log("mesage", message.get());
 (() => axios
   .post(process.env.SLACK_WEBHOOK, message.get())
   .then(() => {
