@@ -24,7 +24,7 @@ console.log("mesage", message.get().text);
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: '## test',
+          text: message.get().text,
         },
       }
     ]
